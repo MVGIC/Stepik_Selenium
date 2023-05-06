@@ -9,11 +9,11 @@ try:
     # Ваш код, который заполняет обязательные поля
     ...
 
-    input1 = browser.find_element_by_xpath("//div/form/div[1]/div[1]/input")
+    input1 = browser.find_element_by_xpath("//*[@class='form-control first' and @required]")
     input1.send_keys("Ivan")
-    input2 = browser.find_element_by_xpath("//div/form/div[1]/div[2]/input")
+    input2 = browser.find_element_by_xpath("//*[@class='form-control second' and @required]")
     input2.send_keys("Petrov")
-    input3 = browser.find_element_by_xpath("//div/form/div[1]/div[3]/input")
+    input3 = browser.find_element_by_xpath("//*[@class='form-control third' and @required]")
     input3.send_keys("test@test.ru")
     button = browser.find_element_by_xpath("//*[@type='submit']")
     button.click()
